@@ -1,0 +1,48 @@
+html {
+  scroll-behavior: smooth;
+  /* 앵커 링크 부드럽게 스크롤 */
+}
+
+.section#typing {
+  height: 300px;
+  /* 원하는 고정 높이 */
+  position: relative;
+  overflow: hidden;
+  /* 넘치는 텍스트 숨김 */
+  padding: 0 5%;
+  display: flex;
+  align-items: center;
+  /* 세로 중앙 */
+}
+
+.typewriter {
+  display: inline-block;
+  white-space: pre-wrap;
+  color: #36d368;
+  font-size: 70px;
+  margin: 0;
+}
+
+.section {
+  padding: 4rem 5%;
+  /* 위/아래 4rem, 좌/우 5% */
+}
+
+/* hero 섹션만 특별히 스타일 */
+.typing {
+  min-height: 60vh;
+  /* 원하는 만큼 높이 */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 5%;
+  background: #000;
+  /* 예시 배경색 */
+  color: #36d368;
+}
+
+/* 네브바 아래 섹션들과 겹치지 않도록 top padding */
+.section:first-of-type {
+  padding-top: calc(4rem + 60px);
+  /* 네브바 높이(예:60px) 보정 */
+}

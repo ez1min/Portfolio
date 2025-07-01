@@ -1,0 +1,103 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: black;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 1024px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    padding: 0 1rem;
+    height: 80px;
+    justify-content: space-between;
+    gap: 2rem;
+
+    /* ← 로고와 메뉴, 메뉴 간 간격 */
+}
+
+.nav-logo {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #36d368;
+    text-decoration: none;
+    margin-right: 3rem;
+    margin-top: 30px;
+    /* ← 로고와 첫 메뉴 사이 여백 */
+}
+
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* 
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: #333;
+    position: relative;
+}
+
+.hamburger::before {
+    content: '';
+    top: -6px;
+    position: absolute;
+}
+
+.hamburger::after {
+    content: '';
+    top: 6px;
+    position: absolute;
+} */
+
+.nav-menu {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-item {
+    color: #36d368;
+    text-decoration: none;
+    padding: 0.5rem;
+    transition: color 0.2s;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+/* .nav-item:hover {
+    color: #36d368;
+} */
+
+/* Mobile */
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background: #fff;
+        flex-direction: column;
+        transform: translateY(-100%);
+        transition: transform 0.3s ease;
+    }
+
+    .nav-menu.active {
+        transform: translateY(0);
+    }
+}

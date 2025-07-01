@@ -1,0 +1,54 @@
+.typewriter {
+    /*  height: calc(100vh - 60px); */
+    /* 네비게이션 바 높이(예: 60px) 만큼 제외 */
+    display: flex;
+    align-items: left;
+    /* 세로 중앙 정렬 */
+    justify-content: flex-start;
+    /* 가로는 왼쪽 정렬 */
+    padding-left: 5%;
+    /* 좌측 여백: 필요에 맞게 %나 px 조정 */
+    white-space: pre-wrap;
+    /* \n을 줄바꿈으로 인식 */
+    color: #36d368;
+    font-size: 70px
+}
+
+.cursor {
+    display: inline-block;
+    width: 1ch;
+    animation: blink 0.7s steps(1) infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    50% {
+        opacity: 1;
+    }
+
+    51%,
+    100% {
+        opacity: 0;
+    }
+}
+
+.section {
+    padding: 80px 5% 40px;
+    /* 위쪽 80px, 좌우 5%, 아래쪽 40px */
+}
+
+.section#typing {
+    height: 60vh;
+    /* 뷰포트 높이의 60% 고정 */
+    min-height: 300px;
+    /* 필요시 최소 높이 보장 */
+    display: flex;
+    align-items: center;
+    /* 세로 중앙에 텍스트 */
+    padding-left: 5%;
+    position: relative;
+    overflow: hidden;
+    /* 혹시 텍스트가 넘치면 숨김 */
+
+}
