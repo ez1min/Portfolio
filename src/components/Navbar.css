@@ -25,12 +25,13 @@
 .nav-logo {
     font-size: 1.25rem;
     font-weight: bold;
-    color: #36d368;
+    color: #00ff02;
     text-decoration: none;
     margin-right: 3rem;
     margin-top: 30px;
     /* ← 로고와 첫 메뉴 사이 여백 */
 }
+
 
 .nav-toggle {
     display: none;
@@ -68,17 +69,19 @@
 }
 
 .nav-item {
-    color: #36d368;
+    color: #fff;
+    ;
     text-decoration: none;
     padding: 0.5rem;
     transition: color 0.2s;
     margin-top: 20px;
     font-size: 18px;
+    text-shadow: 0 0 10px #51ff00;
 }
 
-/* .nav-item:hover {
-    color: #36d368;
-} */
+.nav-item:hover {
+    color: #0ab11d;
+}
 
 /* Mobile */
 @media (max-width: 768px) {

@@ -1,0 +1,54 @@
+.typewriter {
+    position: relative;
+    /* 고정 너비 제거 */
+    max-width: 80ch;
+    /* 필요시 유지 */
+    width: fit-content;
+    /* 내용만큼만 너비 차지 */
+    height: auto;
+    /* 가운데 정렬 */
+    white-space: pre-wrap;
+    word-break: keep-all;
+    text-align: center;
+    color: #00ff02;
+    line-height: 1.2;
+    border: 3px;
+    margin-left: 150px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: clamp(1.6rem, 4vw, 3.0rem);
+}
+
+
+/* 2) 뒤 박스는 before로 고정 */
+/* .typewriter::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--neon-magenta);
+    box-shadow: 0 0 20px #00ff02;
+    z-index: -1;
+
+
+} */
+
+/* .typewriter .cursor {
+    display: inline-block;
+    animation: blink 0.7s steps(1) infinite;
+
+} */
+
+@keyframes blink {
+
+    0%,
+    50% {
+        opacity: 1;
+    }
+
+    51%,
+    100% {
+        opacity: 0;
+    }
+}

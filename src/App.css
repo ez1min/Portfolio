@@ -1,0 +1,245 @@
+html,
+body,
+#root {
+  font-family: 'NeoDunggeunmo Pro', monospace;
+  margin: 0;
+  padding: 0;
+  background: #000;
+  color: #fff;
+  cursor: url('/neon-orange-cross-cursor.cur'), auto;
+}
+
+/* 2) 이미지에만 픽셀 렌더링 */
+img,
+canvas,
+video {
+  image-rendering: pixelated;
+}
+
+/* ── Typewriter(typing-wrapper) 전용 ── */
+.typing-wrapper,
+.typing-wrapper * {
+  position: relative;
+  height: 60vh;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  /*   padding-left: 20%; */
+  font-family: 'NeoDunggeunmo Pro', monospace !important;
+  /* Typewriter 텍스트 강제 스타일 */
+  font-size: 30px;
+  color: #00ff02;
+  text-shadow:
+    1px 1px 0 #000,
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000;
+}
+
+.typing-wrapper .typewriter {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  white-space: pre;
+  word-break: keep-all;
+  overflow: visible;
+}
+
+
+@keyframes blink {
+
+  0%,
+  50% {
+    opacity: 1;
+  }
+
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* ── ABOUT & SKILLS 공통 ── */
+.section {
+  padding: 80px 5% 40px;
+  text-align: center;
+}
+
+.about-me,
+.skills-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.title {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 2px;
+  background: #ccc;
+  margin: .5rem auto 0;
+}
+
+/* ABOUT */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+  margin-top: 2rem;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.info-icon {
+  font-size: 1.5rem;
+}
+
+.label {
+  font-weight: 600;
+  margin: 0;
+}
+
+.value {
+  margin: .25rem 0 0;
+  font-size: .9rem;
+}
+
+/* SKILLS */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skill-icon {
+  font-size: 2.5rem;
+  margin-bottom: .5rem;
+}
+
+/* 반응형 */
+@media (max-width:900px) {
+  .info-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width:600px) {
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 라이트 모드 */
+@media (prefers-color-scheme: light) {
+  :root {
+    background: #000;
+    color: #fff;
+  }
+}
+
+/* ── 타이핑 박스 래퍼 ───────────────────────── */
+.typing-wrapper {
+  /* position: relative; */
+  /* ::before 기준 */
+  width: min(90%, 80ch);
+  /* 화면 90% 또는 최대 80ch */
+  max-width: 800px;
+  /* 절대 최대픽셀 너비 (필요시 조절) */
+  margin: 4rem auto;
+  /* 위아래 여백 4rem, 좌우 중앙 */
+  height: auto;
+  /* 높이는 내용 + padding 만큼 */
+  padding: 2rem 1.5rem;
+  /* 텍스트 여유 공간 */
+  box-sizing: border-box;
+}
+
+/* ── 고정된 “박스” 배경 ─────────────────────── */
+.typing-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  border: 2px solid #39FF14;
+  /* 네온 그린 테두리 */
+  box-shadow: 0 0 20px #39FF14;
+  /* 글로우 효과 */
+  border-radius: 5px;
+  z-index: -1;
+  /* 텍스트 뒤에 깔리도록 */
+}
+
+/* ── 타이핑 텍스트(내부) ─────────────────── */
+.typing-wrapper .Typewriter {
+  /* Typewriter 컴포넌트 루트에 클래스가 다를 수 있으니
+     실제 렌더된 엘리먼트 구조에 맞춰 선택자 조절하세요 */
+  position: relative;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: clamp(1.6rem, 4vw, 3.0rem);
+  color: #39FF14;
+  line-height: 1.4;
+  white-space: pre-wrap;
+  text-align: center;
+  /* 중앙 정렬 */
+}
+
+/* ── 커서 깜빡임 ───────────────────────── */
+.typing-wrapper .cursor {
+  display: inline-block;
+  animation: blink 0.7s steps(1) infinite !important;
+}
+
+@keyframes blink {
+
+  0%,
+  50% {
+    opacity: 1;
+  }
+
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.app-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}

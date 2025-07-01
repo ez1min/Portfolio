@@ -1,0 +1,123 @@
+:root {
+    --neon-purple: #cc33ff;
+    --neon-green: #00ff00;
+    --neon-white: #fff;
+    --color-bg: #000;
+    --color-text: #e0e0e0;
+}
+
+.title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: white;
+    /* 기존 margin: 0 auto 2rem; 제거하고 아래로 교체 */
+    margin-left: 780px;
+    /* top 0, right 0, bottom 2rem, left 1rem */
+    text-shadow: 0 0 10px var(--neon-purple);
+}
+
+.projects-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    font-family: 'NeoDunggeunmo Pro', monospace;
+}
+
+.neon-divider {
+    border: none;
+    height: 2px;
+    background: var(--neon-white);
+    width: 170%;
+    /*  margin-left: 100px; */
+    box-shadow: 0 0 4px var(--neon-white), 0 0 8px var(--neon-white);
+}
+
+
+.projects-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: white;
+    /* 기존 margin: 0 auto 2rem; 제거하고 아래로 교체 */
+    margin-left: 300px;
+    /* top 0, right 0, bottom 2rem, left 1rem */
+    text-shadow: 0 0 10px var(--neon-purple);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(260px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    /* 부모 컨테이너 전체 너비 사용 */
+    /* 그리드 자체는 중앙 정렬 불필요 */
+    justify-items: center;
+    /* 각 카드 자체를 셀 중앙에 */
+    margin-left: 370px;
+}
+
+.project-card {
+    width: 100%;
+    max-width: 260px;
+    background: var(--color-bg);
+    border: 2px solid var(--neon-purple);
+    box-shadow: 0 0 12px var(--neon-purple);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 320px;
+    /* 고정 높이로 통일 */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px var(--neon-purple);
+}
+
+.project-card .tech {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+.project-links {
+    margin-top: 1rem;
+}
+
+.project-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.3rem 0.6rem;
+    border: 1px solid var(--neon-purple);
+    color: var(--neon-purple);
+    background: var(--color-bg);
+    border-radius: 0.4rem;
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.project-links a:hover {
+    background: var(--neon-purple);
+    color: var(--color-bg);
+    font-weight: bold;
+}
+
+/* 반응형 처리 */
+@media (max-width: 1024px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, minmax(260px, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}

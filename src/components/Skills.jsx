@@ -12,10 +12,11 @@ export default function Skills() {
 
     return (
         <section id="skills" className="skills-section">
+            <hr className="neon-divider" />
             <h2 className="skills-title">
                 <FaLink className="title-icon" />
                 SKILLS
-                <span className="title-underline" />
+
             </h2>
 
             <div className="skills-card">
