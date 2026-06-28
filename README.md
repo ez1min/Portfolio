@@ -64,13 +64,12 @@ npm run dev
 
 ## 📂 프로젝트 목록
 
-| 이름                      | 날짜      | 기술 스택               | GitHub 링크               |
+| 이름 | 날짜 | 기술 스택 | GitHub 링크 |
 | ------------------------- | --------- | ----------------------- | ------------------------- |
-
-| Mini Project 1            | 2025.03   | Python                           | [mini_project_2025-03][(https://github.com/yourname/mini_project_2025-03)|
+| Mini Project 1            | 2025.03   | Python                           | [mini_project_2025-03](https://github.com/yourname/mini_project_2025-03) |
 | 합격할 sudo               | 2025.04   | Java, Spring Boot                | [mini_project2](https://github.com/park0609/Mini_Project2) |
 | 기분정거장                | 2025.06   | Java, Spring Boot                | [miniworld](https://github.com/BSEom/miniworld) |
-| 이음 AI                   | 2026.06   | Python, Java, Spring Boot        | [senior-ai-att](https://github.com/ez1min/senior-ai-stt)|
+| 이음 AI                   | 2026.06   | Python, Java, Spring Boot        | [senior-ai-att](https://github.com/ez1min/senior-ai-stt) |
 
 
 
