@@ -8,8 +8,8 @@
 
 ## 🔧 기술 스택
 
-- **Frontend**: React, CSS (Tailwind 없이 직접 네온 글로우 구현)  
-- **Styling**: CSS Custom Properties, `box-shadow` 네온 효과  
+- **Frontend**: React, CSS 
+- **Styling**: CSS Custom Properties
 - **Components**: React Icons  
 - **Build**: Vite  
 - **Hosting**: G Self-hosted on a home server via ipTIME DDNS  
